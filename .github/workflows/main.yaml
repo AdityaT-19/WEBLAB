@@ -1,4 +1,4 @@
-name: Sync changes from main branch to gh-pages branch
+name: sync-main-gh-pages
 on:
   push:
     branches:
@@ -12,9 +12,13 @@ jobs:
               with:
                   fetch-depth: 0
                   ref: gh-pages
-            - name: Sync
+            - name: Configure Git
               run: |
                     git config --global user.email github-actions@github.com
                     git config --global user.name github-actions
+            - name: Sync
+              run: |
                     git merge origin/main
+            - name: Push
+              run: |
                     git push origin gh-pages
