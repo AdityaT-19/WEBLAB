@@ -11,10 +11,10 @@ jobs:
               uses: actions/checkout@v4
               with:
                   fetch-depth: 0
-                  ref: origin/gh-pages
+                  ref: gh-pages
             - name: Sync
               run: |
                     git config --global user.email github-actions@github.com
                     git config --global user.name github-actions
-                    git merge origin/main
+                    git merge main
                     git push origin gh-pages
