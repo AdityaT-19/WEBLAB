@@ -1,0 +1,20 @@
+name: Sync changes from main branch to gh-pages branch
+on:
+  push:
+    branches:
+      - main
+jobs:
+    sync:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+                  ref: origin/gh-pages
+            - name: Sync
+              run: |
+                    git config --global user.email github-actions@github.com
+                    git config --global user.name github-actions
+                    git merge origin/main
+                    git push origin gh-pages
