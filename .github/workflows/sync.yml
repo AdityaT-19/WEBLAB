@@ -23,5 +23,3 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: 'main'
           TO_BRANCH: 'gh-pages'
-	  
-
