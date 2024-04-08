@@ -12,7 +12,9 @@
                 const data = await response.json();
 
                 // Filter directories
-                const directories = data.filter(item => item.type === 'dir');
+                let directories = data.filter(item => item.type === 'dir');
+                //remove .github folder
+                directories = directories.filter(item => item.name !== '.github');
 
                 // Get reference to directory list container
                 const directoryList = document.getElementById("directoryList");
