@@ -1,51 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory Listing</title>
-    <script>
-        // Function to fetch directory listing using GitHub API
-        async function displayDirectoryListing() {
-            try {
-                const response = await fetch('https://api.github.com/repos/AdityaT-19/WEBLAB/contents/');
-                const data = await response.json();
-
-                // Filter directories
-                let directories = data.filter(item => item.type === 'dir');
-                //remove .github folder
-                directories = directories.filter(item => item.name !== '.github');
-
-                // Get reference to directory list container
-                const directoryList = document.getElementById("directoryList");
-
-                // Generate HTML for directory listing
-                directories.forEach(directory => {
-                    const link = document.createElement("a");
-                    link.href = directory.name + "/index.html"; // Link to index.html in each directory
-                    link.textContent = directory.name;
-                    link.classList.add("directory-link");
-                    directoryList.appendChild(link);
-                    directoryList.appendChild(document.createElement("br")); // Line break for readability
-                });
-            } catch (error) {
-                console.error('Error fetching directory listing:', error);
-            }
-        }
-
-        // Call the function when the page is loaded
-        window.onload = displayDirectoryListing;
-    </script>
-    <style>
-        /* Add CSS styles as needed */
-        .directory-link {
-            display: block;
-            margin-bottom: 5px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Directory Listing</h1>
-    <div id="directoryList"></div>
-</body>
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Directory Listing</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+	<h1>Directory Listing</h1>
+	<div id="directoryList"></div>
+  </body>
 </html>
