@@ -1,0 +1,18 @@
+th,td {
+        text-align: center;
+        padding: 12px;
+}
+
+th{
+	background-color: #eda34c;
+}
+
+table{
+	border-collapse: collapse; 
+	border: black 3px solid;
+}
+
+.span7{
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
