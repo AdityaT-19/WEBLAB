@@ -7,12 +7,13 @@
         <link rel="stylesheet" href="style.css">
     </head>  
     <body>  
+    	<center>
         <h1> Calculator</h1>  
         <table class="cal" >
             <tr>
-                <td colspan="2"><input name="result" class="display-box" type="text" id="result" disabled placeholder="Enter Expression" /> </td>   
+                <td colspan="2"><input name="result" class="display-box" type="text" id="result" placeholder="Enter Expression" /> </td>   
                 <td > <input type="button" value="Clear" onclick="clearScreen()" id="btn" class="clear"  /> </td>
-                <td > <input type="button" value="Del" onclick="deleteChar()" id="btn"  /> </td>
+                <td > <input type="button" value="Delete" onclick="deleteChar()" id="btn"  /> </td>
             </tr>
             <tr>
                 
@@ -42,6 +43,7 @@
                 <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
             </tr>
         </table>
+        </center>
         <script src="./script.js">
            
         </script>

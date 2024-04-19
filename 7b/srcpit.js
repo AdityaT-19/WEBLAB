@@ -32,7 +32,6 @@ function validateForm() {
     alert("Gender is required");
     return false;
   }
-
   return true;
 }
 
@@ -41,7 +40,8 @@ function displayCombinedInfo() {
   const email = document.getElementById("email").value;
   const mobile = document.getElementById("mobile").value;
   const gender = document.getElementById("gender").value;
+  const color = document.getElementById("color").value;
 
-  const combinedInfo = `Name: ${name}\nEmail: ${email}\nMobile No: ${mobile}\nGender: ${gender}`;
+  const combinedInfo = `Name: ${name}\nEmail: ${email}\nMobile No: ${mobile}\nGender: ${gender}\nColor : ${color}`;
   displayInfo.value = combinedInfo;
 }

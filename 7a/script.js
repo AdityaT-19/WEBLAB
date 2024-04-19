@@ -1,16 +1,17 @@
+const result = document.getElementById("result");
+
 function clearScreen() {
-  document.getElementById("result").value = "";
+  result.value = "";
 }
 function display(value) {
-  document.getElementById("result").value += value;
+  result.value += value;
 }
 function calculate() {
-  var eq = document.getElementById("result").value;
-  var res = eval(eq);
-
-  document.getElementById("result").value = res;
+	var eq = result.value;
+  	var res = eval(eq);
+  	result.value = res.toFixed(2);
 }
 function deleteChar() {
-  var eq = document.getElementById("result").value;
-  document.getElementById("result").value = eq.substring(0, p.length - 1);
+  var eq = result.value;
+  result.value = eq.substring(0, eq.length - 1);
 }
