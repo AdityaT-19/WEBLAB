@@ -1,12 +1,14 @@
 .cal {
   padding: 2%;
   border-radius: 1.5em;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 550px;
   background-color: #5d74ac;
+  border: 3px black solid;
 }
 
 .cal tr td {
+	width:25%;
   padding: 1%;
 }
 
@@ -20,16 +22,22 @@
   text-align: right;
 }
 
+
+
+.display-box {
+	font-size:25px;
+}
+
 .display-box input {
   width: 100%;
   height: 100%;
-  font-size: 30px;
   text-align: right;
   border: none;
   background-color: #dcdbe1;
 }
-
-
+::placeholder{
+	text-align: center;
+}
 input[type=button] {
   background-color: #021143;
   color: white;
@@ -41,7 +49,7 @@ input[type=button] {
   padding:5%;
   border-radius: 25%;
   cursor: pointer;
-  box-shadow: #dcdbe1 0.5px 0.5px 0.5px 0.5px;
+  box-shadow: #dcdbe1 0.5px 1.5px 6px 2px;
   transition: 0.3s;
   margin: 0.5%;
 }
@@ -52,7 +60,7 @@ input[type=button]:hover {
 input[type=button]:active {
   color: #0058fb;
   background-color: #90abde;
-  transform: translateY(4px);
+  transform: translateY(10%);
   box-shadow: #dcdbe1 0px 0px 0px 0px;
 }
 
@@ -65,5 +73,7 @@ input[type=button]:active {
   font-size: 20px;
   padding:6%;
   border-radius: 25%;
-
+}
+.clear:child{
+	padding: 2px;
 }
